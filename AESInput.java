@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 
 // A sample usage of the AES128 block cipher gadget
-public class AES128CipherCircuitGenerator extends CircuitGenerator {
+public class AESInput extends CircuitGenerator {
 
 	private Wire[] inputs;
 	private Wire[] key;
@@ -26,7 +26,7 @@ public class AES128CipherCircuitGenerator extends CircuitGenerator {
     private String inputKeyV;
     private String inputMsgV;
 
-	public AES128CipherCircuitGenerator(String circuitName) {
+	public AESInput(String circuitName) {
 		super(circuitName);
 	}
 
@@ -79,7 +79,7 @@ public class AES128CipherCircuitGenerator extends CircuitGenerator {
         inputMsgV = scanner. nextLine();
 
 		Config.hexOutputEnabled = true;
-		AES128CipherCircuitGenerator generator = new AES128CipherCircuitGenerator(
+		AESInput generator = new AES128CipherCircuitGenerator(
 				"AES_Circuit");
 		generator.generateCircuit();
 		generator.evalCircuit();
