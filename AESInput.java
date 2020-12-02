@@ -79,7 +79,7 @@ public class AESInput extends CircuitGenerator {
         inputMsgV = scanner. nextLine();
 
 		Config.hexOutputEnabled = true;
-		AESInput generator = new AES128CipherCircuitGenerator(
+		AESInput generator = new AESInput(
 				"AES_Circuit");
 		generator.generateCircuit();
 		generator.evalCircuit();
